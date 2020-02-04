@@ -1,0 +1,370 @@
+.impac-course-catelogue {
+    width: 100%;
+    padding: 0 3em;
+    margin: auto;
+
+    // category items
+    .categories{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 3em;
+        .category-item{
+            border: 1px solid #00bfff;
+            margin: 0.2em;
+            padding: 0.5em;
+            color: #7f7f7f;
+            font-size: 1em;
+            &:hover{
+                cursor: pointer;
+            }
+            &.selected{
+                background-color: #00bfff;
+                color: #ffffff;
+            }
+        }
+    }
+
+    // search bar
+    .search-bar-wrap{
+        width: 60%;
+        padding: 2em 0;
+        margin: auto;
+        box-sizing: content-box;
+        position: relative;
+        
+        .search-bar{
+            width: 100%;
+            height: 3em;
+            padding: 1rem;
+            margin-bottom: 3rem;
+            border-radius: 0.25rem;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        }
+        .search-icon {
+            display: inline-block;
+            position: absolute;
+            width: 2em;
+            height: 2em;
+            right: 0.5em;
+            margin: 0.5em;
+        }
+    }
+
+    .filters-courses-section{
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+
+        .filters-section-mobile{
+            display: none;
+
+            .general-select {
+                margin: 0.5em 0;
+            }
+
+            .calendar-filter{
+                box-sizing: border-box;
+                margin: 0.5em 0;
+                .calendar{
+                    box-sizing: border-box;
+                    width: 100%;
+                    border: 1px solid hsl(0,0%,80%);
+                    border-radius: 4px;
+                    padding: 0 0 0 0.5em;
+                    label{
+                        min-width: 3em;
+                    }
+                    .react-datepicker-wrapper{
+                        .react-datepicker__input-container{
+                            height: 100%;
+                            input{
+                                box-sizing: border-box;
+                                width: 100%;
+                                height: auto;
+                                text-align: center;
+                                padding-right: 1em;
+                                border-radius: 4px;
+                                border: 0;
+                                margin: 2px 2px 2px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .filters-section{
+            flex: 0 0 25%;
+            max-width: 25%;
+            // general filters
+            .general-select {
+                width: 80%;
+            }
+
+            // calendar filters
+            .calendar-filter{
+                box-sizing: border-box;
+                width: 80%;
+                margin: 1.5em 0;
+                .calendar{
+                    box-sizing: border-box;
+                    width: 100%;
+                    border: 1px solid hsl(0,0%,80%);
+                    border-radius: 4px;
+                    padding: 0 0 0 0.5em;
+                    label{
+                        min-width: 3em;
+                    }
+                    .react-datepicker-wrapper{
+                        .react-datepicker__input-container{
+                            height: 100%;
+                            input{
+                                box-sizing: border-box;
+                                width: 100%;
+                                height: auto;
+                                text-align: center;
+                                padding-right: 1em;
+                                border-radius: 4px;
+                                border: 0;
+                                margin: 2px 2px 2px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // courses display
+        .courses-setion{
+            flex: 0 0 75%;
+            max-width: 75%;
+            .no-results{
+                font-size: xx-large;
+            }
+            .course-card{
+                box-sizing: border-box;
+                box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                align-items: center;
+                margin: 1.5em 0;
+                border: 1px solid #f2f2f2;
+                padding: 1em 1em 1em 1.5em;
+    
+                .course-avatar{
+                    width: 200px;
+                    height: 150px;
+                    min-width: 200px;
+                }
+    
+                .course-description{
+                    margin: 0 0 0 1em;
+                    width: 100%;
+                    .course-category{
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: start;
+                        color: #9b9b9b;
+                        label{
+                            margin-right: 0.5em;
+                        }
+                    }
+                    
+                    .course-title{
+                        font-size: larger;
+                        font-weight: bolder;
+                    }
+                    
+                    .course-card-bottom{
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        padding: 0.6em 0;
+                        .course-tags{
+                            label{
+                                background-color: #e8f0f6;
+                                border: 0;
+                                border-radius: 2px;
+                                color: #3392d5;
+                                margin: auto 0.5em;
+                                padding: 0.2em 0.4em;
+                            }
+                        }
+                        
+                        .learn-more-button{
+                            background-color: #00bfff;
+                            border: 0;
+                            color: #ffffff;
+                            font-weight: 600;
+                            border-radius: 4px;
+                            height: 2.5em;
+                            padding: 0 1em;
+                            width: 8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// for screens of which the width are larger than 1680px
+@media screen and (min-width: 1680px){
+    .impac-course-catelogue {
+        width: 80%;
+    }
+}
+
+// for screens of which the width are less than 1440px
+@media screen and (max-width: 1440px){
+    .impac-course-catelogue {
+        width: 100%;
+    }
+}
+
+// for screens of which the width are less than 1280px
+@media screen and (max-width: 1280px){
+    .impac-course-catelogue {
+        padding: 0 2em;
+        // search bar
+        .search-bar-wrap{
+            width: 80%;
+        }
+        
+        .filters-courses-section{
+            // courses display
+            .courses-setion{
+                .course-card{
+                    .course-avatar{
+                        width: 180px;
+                        height: 135px;
+                        min-width: 180px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// for screens of which the width are less than 1024px
+@media screen and (max-width: 1024px){
+    .impac-course-catelogue {
+        padding: 0 1em;
+
+        .filters-courses-section{
+            // general filters
+            .filters-section{
+                .general-select {
+                    width: 90%;
+                }
+    
+                // calendar filters
+                .calendar-filter{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+// for screens of which the width are less than 768px
+@media screen and (max-width: 768px){
+    .impac-course-catelogue {
+        .categories{
+            display: none;
+        }
+
+        .search-bar-wrap{
+            width: 100%;
+            .search-bar{
+                margin-bottom: 0;
+            }
+        }
+
+        .filters-courses-section{
+            display: block;
+
+            .filters-section-mobile{
+                display: block;
+            }
+
+            .filters-section{
+                display: none;
+            }
+
+            .courses-setion{
+                width: 98%;
+                max-width: 98%;
+                margin: auto;
+            }
+        }
+    }
+}
+
+// for mobiles
+@media screen and (max-width: 680px){
+    .impac-course-catelogue {
+        .filters-courses-section{
+            .courses-setion{
+                width: 100%;
+                max-width: 100%;
+                .course-card{
+                    .course-avatar{
+                        width: 150px;
+                        height: 112.5px;
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// for mobiles
+@media screen and (max-width: 660px){
+    .impac-course-catelogue {
+        .filters-courses-section{
+            .courses-setion{
+                width: 100%;
+                max-width: 100%;
+                .course-card{
+                    padding: 1em 0;
+                    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+                    border-radius: 4px;
+                    .course-avatar{
+                        display: none;
+                    }
+                    .course-description{
+                        margin: 0;
+                        .course-category{
+                            padding: 0 0.8em 0.8em 0.8em;
+                        }
+                        .course-title{
+                            padding: 0.6em 1em;
+                            color: #0285bd;
+                            background-color: #bfefff;
+                        }
+                        .course-overview{
+                            padding: 0.8em;
+                        }
+                        .course-card-bottom{
+                            display: block;
+                            padding: 0;
+                            .course-tags{
+                                margin-bottom: 0.8em;
+                            }
+                            .course-button{
+                                display: flex;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
